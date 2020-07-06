@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+}
+.logo{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo .letters{
+    fill:none;
+}
+.logo-g{
+    stroke: #484848;
+    stroke-width: 20;
+}
+.logo-o {
+	stroke: #484848;
+    stroke-width: 15;
+}
+.logo-d{
+    stroke: #484848;
+    stroke-width: 14;
+}
+.logo-p{
+    stroke: #fa6350;
+    stroke-width: 14;
+}
+.logo span{
+    font-family: "Sarabun" ,sans-serif;
+    font-size: 90px;
+    color: #fa6350;
+    font-weight: 800;
+    line-height: 0;
+    font-style: italic;
+    transition: all 0.5s ease;
+    transform-origin: top;
+    transform: rotateX(0deg);
+}
