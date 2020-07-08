@@ -54,21 +54,65 @@
 		c2.85-2.36,4.27-7.52,4.27-11.47" />
             <path class="letters logo-p" clip-path="url(#logoClip)" d="M265.25,71.35l11.81-67.2l-1.09,6.22h21.19c0,0,9.1,1.44,9.1,12.02s-1.95,20.77-29.5,20.77" />
         </svg>
-        <span>
-            late
-        </span>
+        <div class="logo-letter">lace</div>
     </div>
+    <div style="text-align: center;">
+        <button onclick="logo('lace')">Place</button>
+        <button onclick="logo('late')">Plate</button>
+        <button onclick="logo('lays')">Plays</button>
+    </div>
+    <script>
+        
+        var logoP = document.querySelector(".logo-p");
+        var logoText = document.querySelector(".logo-letter");
+        var logoWidth = logoText.offsetWidth;
+        
+        var logoTimeline = anime.timeline();
+        logoTimeline
+            .add({
+                targets: '.letters',
+                strokeDashoffset: [anime.setDashoffset, 0],
+                easing: 'easeInOutSine',
+                duration: 700,
+                delay: (el, i) => {
+                    return i * 300
+                }
+            })
+            .add({
+                targets: '.logo-letter',
+                easing: 'easeInOutSine',
+                width: [0,logoWidth],
+                opacity: [0, 1],
+                duration: 1000,
+            });
 
-    <script>        
-        anime({
-            targets: '.logo .letters',
-            strokeDashoffset: [anime.setDashoffset, 0],
-            easing: 'easeInOutSine',
-            duration: 700,
-            delay: (el, i) => {
-                return i * 300
+        function logo(val) {
+            logoText.innerHTML = val;
+            logoText.removeAttribute('style');
+            logoWidth = logoText.offsetWidth;
+            
+            anime({
+                targets: '.logo-letter',
+                easing: 'easeInOutSine',
+                width: [logoWidth],
+                duration: 1000
+            });
+            
+            
+            if (val == "lace") {
+                logoColor = "#3e9bd6";
+                logoP.style.stroke = logoColor;
+                logoText.style.color = logoColor;
+            } else if (val == "late") {
+                logoColor = "#fa6350";
+                logoP.style.stroke = logoColor;
+                logoText.style.color = logoColor;
+            } else if (val == "lays") {
+                logoColor = "#fece4e";
+                logoP.style.stroke = logoColor;
+                logoText.style.color = logoColor;
             }
-        });
+        }
     </script>
 </body>
 
