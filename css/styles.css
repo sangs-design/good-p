@@ -2,10 +2,16 @@ body{
     margin: 0;
 }
 .logo{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 60px;
+}
+.logo svg{
+    width: auto;
+    margin-top: 0.1em;
+    height: 0.8em;
 }
 .logo .letters{
     fill:none;
@@ -23,17 +29,16 @@ body{
     stroke-width: 14;
 }
 .logo-p{
-    stroke: #fa6350;
+    stroke: #3e9bd6;
     stroke-width: 14;
+    transition: stroke 1s ease;
 }
-.logo span{
+
+.logo-letter{
     font-family: "Sarabun" ,sans-serif;
-    font-size: 90px;
-    color: #fa6350;
+    color: #3e9bd6;
     font-weight: 800;
-    line-height: 0;
     font-style: italic;
-    transition: all 0.5s ease;
-    transform-origin: top;
-    transform: rotateX(0deg);
+    overflow: hidden;
+    transition: color 1s ease;
 }
