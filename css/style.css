@@ -80,7 +80,7 @@
     width: var(--slider-triangle-size);
     height: var(--slider-triangle-size);
     transform: rotate(45deg);
-    z-index: 200;
+    z-index: 500;
     position: absolute;
     background: var(--slider-triangle-color);
 }
