@@ -8,7 +8,7 @@ new fullpage('#fullpage', {
     touchSensitivity: 0,
     paddingTop: '58px',
     paddingBottom: '54px',
-    normalScrollElements: '#sec1',
+    normalScrollElements: '#sec1, #sec2',
     onLeave: function (origin, destination, direction) {
         var loadedSection = this;
         if (destination.index == 2) {
