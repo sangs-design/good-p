@@ -74,7 +74,7 @@
         </div>
 
     </div>
-    <div id="contents">
+    <div id="contents" class="loading">
         <!--   콘텐츠 영역-->
         <div id="sec1" class="section">
             <!-- 메인 슬라이더-->
@@ -536,7 +536,11 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         
-        $('#contents *').attr("data-aos","fade-in");
+        document.querySelector('#contents *').setAttribute("data-aos","fade-in");
+        
+        window.addEventListener('DOMContentLoaded', (event) => {
+            $('#contents').removeClass('loading');
+        });
         
         AOS.init({
             offset: 54,
