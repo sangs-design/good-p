@@ -5,6 +5,7 @@ new fullpage('#fullpage', {
     fadingEffect: true,
     scrollOverflow: true,
     scrollOverflowReset: true,
+    touchSensitivity: 0,
     paddingTop: '58px',
     paddingBottom: '54px',
     normalScrollElements: '#slider',
