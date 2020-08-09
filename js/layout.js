@@ -13,7 +13,8 @@ var mySwiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     }
-})
+});
+
 $('.section').addClass('transition');
 //new fullpage('#fullpage', {
 //    licenseKey: '0EA38F38-7D9D4210-8AFFEEAD-29BEAE4D',
