@@ -535,14 +535,11 @@
     <script src="js/map.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        // You can also pass an optional settings object
-        // below listed default settings
         AOS.init({
-            // Global settings:
-            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-            initClassName: 'aos-init', // class applied after initialization
-            animatedClassName: 'aos-animate', // class applied on animation
-            once: true,
+            offset: 120,
+            startEvent: 'DOMContentLoaded',
+            initClassName: 'aos-init',
+            animatedClassName: 'aos-animate',
             duration: 2000
         });
     </script>
