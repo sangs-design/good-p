@@ -9,7 +9,7 @@
     --triangle-size: 28px;
     --max-width: 800px;
 }
-#content *{
+#content{
     visibility: hidden;
 }
 body{
