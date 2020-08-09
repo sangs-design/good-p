@@ -9,6 +9,9 @@
     --triangle-size: 28px;
     --max-width: 800px;
 }
+#content *{
+    visibility: hidden;
+}
 body{
     font-family: sans-serif;
 }
