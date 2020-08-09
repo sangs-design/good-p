@@ -348,9 +348,15 @@
 .transition{
     transition: 2s all ease;
 }
+.fp-section:first-child+.fp-section{
+    opacity: 1;
+}
 .fp-section+.fp-section{
 	opacity: 0;
 }
-.fp-section.active {
+.section.active {
 	opacity: 1;
+}
+.slide .fp-tableCell img{
+    width: 100%;
 }
