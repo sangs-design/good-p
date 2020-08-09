@@ -74,7 +74,7 @@
         </div>
 
     </div>
-    <div id="fullpage">
+    <div id="contents">
         <!--   콘텐츠 영역-->
         <div id="sec1" class="section">
             <!-- 메인 슬라이더-->
@@ -535,8 +535,11 @@
     <script src="js/map.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+        
+        $('#contents *').attr("data-aos","fade-in");
+        
         AOS.init({
-            offset: 120,
+            offset: 54,
             startEvent: 'DOMContentLoaded',
             initClassName: 'aos-init',
             animatedClassName: 'aos-animate',
