@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="css/fullpage.min.css">
     <link rel="stylesheet" href="css/box-shadow.css">
     <link rel="stylesheet" href="css/logo.css">
@@ -14,64 +15,65 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/anime.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+
     <title>Here is Good P</title>
 </head>
 
 <body>
-   
-        <!--   상단-->
-        <div id="header">
-            <div class="wrapper">
-                <div class="logo">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="314.69px" height="72.19px" viewBox="0 0 314.69 72.19" style="overflow:visible;enable-background:new 0 0 314.69 72.19;" xml:space="preserve">
-                        <defs>
-                            <clipPath id="logoClip">
-                                <path d="M63.26,34.19L47.8,34.18c0,0,0,0,0,0.01h-6.3V29.9l-16.79,9.69l16.79,9.69V45h7.84c-0.64,3.78-1.83,6.86-3.56,9.24
+
+    <!--   상단-->
+    <div id="header">
+        <div class="wrapper">
+            <div class="logo">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="314.69px" height="72.19px" viewBox="0 0 314.69 72.19" style="overflow:visible;enable-background:new 0 0 314.69 72.19;" xml:space="preserve">
+                    <defs>
+                        <clipPath id="logoClip">
+                            <path d="M63.26,34.19L47.8,34.18c0,0,0,0,0,0.01h-6.3V29.9l-16.79,9.69l16.79,9.69V45h7.84c-0.64,3.78-1.83,6.86-3.56,9.24
 		c-2.75,3.77-8.78,5.66-14.08,5.66c-0.01,0-0.01,0-0.02,0c-5.31,0-9.34-1.89-12.1-5.66c-2.75-3.78-4.13-9.31-4.13-16.61
 		c0-7.36,1.39-12.91,4.18-16.66c2.78-3.74,6.9-5.62,12.34-5.62c6.4,0,11.26,2.53,14.59,7.58l8.83-7.58
 		c-1.92-3.9-4.93-6.93-9.02-9.07c-4.1-2.14-8.96-3.22-14.59-3.22c-6.4,0-12,1.41-16.8,4.22c-4.8,2.82-8.5,6.83-11.09,12.05
 		C1.3,24.56,0,30.66,0,37.63c0,6.98,1.3,13.07,3.89,18.29c2.59,5.22,6.29,9.23,11.09,12.05c4.75,2.79,10.29,4.19,16.62,4.22l0,0.01
 		c0.03,0,0.06,0,0.09,0c0.03,0,0.06,0,0.09,0c4.51,0,8.52-0.7,12.05-2.07c1.59-0.59,3.12-1.3,4.57-2.15
 		c4.8-2.82,8.5-6.83,11.09-12.05c2.59-5.22,3.89-11.31,3.89-18.29C63.37,36.46,63.33,35.31,63.26,34.19z" />
-                                <path d="M77.25,65.57c-4.45-4.42-6.67-10.53-6.67-18.34c0-7.81,2.22-13.92,6.67-18.34c4.45-4.42,10.64-6.62,18.58-6.62
+                            <path d="M77.25,65.57c-4.45-4.42-6.67-10.53-6.67-18.34c0-7.81,2.22-13.92,6.67-18.34c4.45-4.42,10.64-6.62,18.58-6.62
 		c7.94,0,14.13,2.21,18.57,6.62c4.45,4.42,6.67,10.53,6.67,18.34c0,7.81-2.22,13.92-6.67,18.34c-4.45,4.42-10.64,6.62-18.57,6.62
 		C87.88,72.19,81.69,69.98,77.25,65.57z M104.36,58.17c2.05-2.62,3.07-6.27,3.07-10.94c0-4.67-1.02-8.32-3.07-10.94
 		c-2.05-2.62-4.9-3.94-8.54-3.94c-3.65,0-6.5,1.31-8.54,3.94c-2.05,2.62-3.07,6.27-3.07,10.94c0,4.67,1.02,8.32,3.07,10.94
 		c2.05,2.62,4.9,3.94,8.54,3.94C99.47,62.11,102.32,60.8,104.36,58.17z" />
-                                <path d="M133.5,65.57c-4.45-4.42-6.67-10.53-6.67-18.34c0-7.81,2.22-13.92,6.67-18.34c4.45-4.42,10.64-6.62,18.58-6.62
+                            <path d="M133.5,65.57c-4.45-4.42-6.67-10.53-6.67-18.34c0-7.81,2.22-13.92,6.67-18.34c4.45-4.42,10.64-6.62,18.58-6.62
 		c7.93,0,14.13,2.21,18.58,6.62c4.45,4.42,6.67,10.53,6.67,18.34c0,7.81-2.22,13.92-6.67,18.34s-10.64,6.62-18.58,6.62
 		C144.14,72.19,137.95,69.98,133.5,65.57z M160.62,58.17c2.05-2.62,3.07-6.27,3.07-10.94c0-4.67-1.02-8.32-3.07-10.94
 		c-2.05-2.62-4.9-3.94-8.54-3.94c-3.65,0-6.5,1.31-8.54,3.94c-2.05,2.62-3.07,6.27-3.07,10.94c0,4.67,1.02,8.32,3.07,10.94
 		c2.05,2.62,4.9,3.94,8.54,3.94C155.72,62.11,158.57,60.8,160.62,58.17z" />
-                                <path d="M187.98,65.5c-3.58-4.54-5.38-10.85-5.38-18.91c0-4.86,0.83-9.12,2.5-12.77c1.66-3.65,4.05-6.46,7.15-8.45
+                            <path d="M187.98,65.5c-3.58-4.54-5.38-10.85-5.38-18.91c0-4.86,0.83-9.12,2.5-12.77c1.66-3.65,4.05-6.46,7.15-8.45
 		c3.1-1.98,6.73-2.98,10.9-2.98c2.82,0,5.23,0.43,7.25,1.3c2.02,0.86,3.82,2.22,5.42,4.08h0.19V0.12h13.63v58.27
 		c0,6.91,0.1,11.23,0.29,12.96h-12.86c-0.06-0.96-0.1-2.94-0.1-5.95h-0.19c-1.47,2.05-3.47,3.71-6,4.99
 		c-2.53,1.28-5.17,1.92-7.92,1.92C196.52,72.31,191.56,70.04,187.98,65.5z M213.18,59.31c1.89-1.76,2.83-4.11,2.83-7.06V41.98
 		c0-2.62-0.99-4.86-2.98-6.72c-1.98-1.86-4.45-2.78-7.39-2.78c-3.14,0-5.5,1.22-7.1,3.65c-1.6,2.43-2.4,5.99-2.4,10.66
 		c0,4.93,0.8,8.69,2.4,11.28s3.97,3.89,7.1,3.89C208.78,61.95,211.29,61.07,213.18,59.31z" />
-                                <path d="M270.05,4.16h22.27c7.04,0,12.53,1.5,16.46,4.51c3.94,3.01,5.9,7.2,5.9,12.58c0,8.77-2.53,15.58-7.58,20.45
+                            <path d="M270.05,4.16h22.27c7.04,0,12.53,1.5,16.46,4.51c3.94,3.01,5.9,7.2,5.9,12.58c0,8.77-2.53,15.58-7.58,20.45
 		c-5.06,4.86-12.13,7.3-21.21,7.3h-8.26l-3.94,22.37h-15.46L270.05,4.16z M288.1,36.79c3.33,0,6.01-1.21,8.06-3.65
 		c2.05-2.43,3.07-5.6,3.07-9.5c0-2.37-0.69-4.16-2.06-5.38c-1.38-1.21-3.41-1.82-6.1-1.82h-7.68l-3.65,20.35H288.1z" />
-                            </clipPath>
-                        </defs>
-                        <path class="letters logo-g" clip-path="url(#logoClip)" d="M52.23,21.01c0,0-5.21-12.52-20.27-12.52S7.04,19.8,7.04,37.63S15.54,68,31.97,68s26.96-14.65,26.96-28.4H23.67" />
-                        <path class="letters logo-o" clip-path="url(#logoClip)" d="M95.82,27.31c-5.85,0-10.42,1.76-13.71,5.27c-3.29,3.51-4.93,8.4-4.93,14.65c0,6.26,1.64,11.14,4.93,14.65
+                        </clipPath>
+                    </defs>
+                    <path class="letters logo-g" clip-path="url(#logoClip)" d="M52.23,21.01c0,0-5.21-12.52-20.27-12.52S7.04,19.8,7.04,37.63S15.54,68,31.97,68s26.96-14.65,26.96-28.4H23.67" />
+                    <path class="letters logo-o" clip-path="url(#logoClip)" d="M95.82,27.31c-5.85,0-10.42,1.76-13.71,5.27c-3.29,3.51-4.93,8.4-4.93,14.65c0,6.26,1.64,11.14,4.93,14.65
 	c3.28,3.51,7.85,5.27,13.71,5.27c5.85,0,10.42-1.75,13.71-5.27c3.28-3.51,4.93-8.4,4.93-14.65c0-6.25-1.64-11.14-4.93-14.65
 	C106.24,29.07,101.67,27.31,95.82,27.31" />
-                        <path class="letters logo-o" clip-path="url(#logoClip)" d="M152.08,27.31c-5.85,0-10.42,1.76-13.71,5.27c-3.29,3.51-4.93,8.4-4.93,14.65c0,6.26,1.64,11.14,4.93,14.65
+                    <path class="letters logo-o" clip-path="url(#logoClip)" d="M152.08,27.31c-5.85,0-10.42,1.76-13.71,5.27c-3.29,3.51-4.93,8.4-4.93,14.65c0,6.26,1.64,11.14,4.93,14.65
 	c3.28,3.51,7.85,5.27,13.71,5.27c5.85,0,10.42-1.75,13.71-5.27c3.28-3.51,4.93-8.4,4.93-14.65c0-6.25-1.64-11.14-4.93-14.65
 	C162.49,29.07,157.93,27.31,152.08,27.31" />
-                        <path class="letters logo-d" clip-path="url(#logoClip)" d="M222.79,0v71.35l0-31.64h-3.47c0-3.52-1.5-6.06-4.49-8.55c-2.99-2.49-6.71-3.74-11.14-3.74c-4.73,0-8.3,1.63-10.71,4.9
+                    <path class="letters logo-d" clip-path="url(#logoClip)" d="M222.79,0v71.35l0-31.64h-3.47c0-3.52-1.5-6.06-4.49-8.55c-2.99-2.49-6.71-3.74-11.14-3.74c-4.73,0-8.3,1.63-10.71,4.9
 		c-2.41,3.27-3.62,8.03-3.62,14.3c0,6.62,1.21,11.66,3.62,15.14c2.41,3.48,5.98,5.22,10.71,5.22c4.73,0,8.51-1.18,11.36-3.54
 		c2.85-2.36,4.27-7.52,4.27-11.47" />
-                        <path class="letters logo-p" clip-path="url(#logoClip)" d="M265.25,71.35l11.81-67.2l-1.09,6.22h21.19c0,0,9.1,1.44,9.1,12.02s-1.95,20.77-29.5,20.77" />
-                    </svg>
-                    <div class="logo-letter">lace</div>
-                </div>
-                <div id="gnb_search"><i class="fas fa-search"></i></div>
+                    <path class="letters logo-p" clip-path="url(#logoClip)" d="M265.25,71.35l11.81-67.2l-1.09,6.22h21.19c0,0,9.1,1.44,9.1,12.02s-1.95,20.77-29.5,20.77" />
+                </svg>
+                <div class="logo-letter">lace</div>
             </div>
-
+            <div id="gnb_search"><i class="fas fa-search"></i></div>
         </div>
+
+    </div>
     <div id="fullpage">
         <!--   콘텐츠 영역-->
         <div id="sec1" class="section">
@@ -82,7 +84,7 @@
                         <img src="images/slide.png" alt="slide_sample">
                     </div>
                     <div class="swiper-slide">
-                       <img src="images/slide2.png" alt="slide_sample">
+                        <img src="images/slide2.png" alt="slide_sample">
                     </div>
                     <div class="swiper-slide">
                         <img src="images/slide.png" alt="slide_sample">
@@ -99,7 +101,7 @@
                     <i class="fas fa-search"></i>
                 </div>
             </div>
-            
+
             <!--        카테고리-->
             <div id="categories" class="wrapper">
                 <div class="list-wrapper">
@@ -142,7 +144,7 @@
                 </div>
                 <div id="categories_brand">
                     <div class="list-wrapper brand triangle border">
-                        
+
                         <div class="list-item">
                             <div class="list-img">
                                 <img src="images/sample.png" alt="">
@@ -210,26 +212,26 @@
                 </div>
             </div>
         </div>
-        <div id="sec2" class="section">
+        <div id="sec2" data-aos="fade-up" class="section">
             <!--        지도-->
             <div id="map" class="wrapper">
-            <div id="location">
-                <ul>
-                    <li class="on">지역</li>
-                    <li>지역</li>
-                    <li>지역</li>
-                    <li>지역</li>
-                    <li>지역</li>
-                    <li>지역</li>
-                </ul>
-            </div>
-            <svg id="daegu" version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="456.49px" height="449.51px" viewBox="0 0 456.49 449.51" overflow="visible" xml:space="preserve">
-                <path class="junggu" d="M285.3,163.29c0.23,0.66,0.53,1.27,0.9,1.77
+                <div id="location">
+                    <ul>
+                        <li class="on">지역</li>
+                        <li>지역</li>
+                        <li>지역</li>
+                        <li>지역</li>
+                        <li>지역</li>
+                        <li>지역</li>
+                    </ul>
+                </div>
+                <svg id="daegu" version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="456.49px" height="449.51px" viewBox="0 0 456.49 449.51" overflow="visible" xml:space="preserve">
+                    <path class="junggu" d="M285.3,163.29c0.23,0.66,0.53,1.27,0.9,1.77
 	c-0.19,1.88-2.36,5.36-2.36,5.36l-4.86,6.42l-0.01-0.01c0,0-5.15-0.97-9.35-1.29c-4.19-0.33-7.73-1.29-11.28-1.62
 	c-3.55-0.32-15.8-3.54-15.8-3.54s-0.04-0.13,0.01-0.34c0.1-0.37,0.5-0.98,1.93-1.6c2.25-0.96,4.19-5.15,5.8-9.67
 	c1.61-4.51,2.26-9.67,2.26-9.67l0.12-0.07c0.75,1.61,2.04,2.71,4.39,2.97c2.9,0.32,13.22,1.61,19.34,2.58
 	c4.45,0.7,6.69,2.43,7.7,4.31c0.28,1.78,0.7,3.41,1.2,4.37C285.29,163.27,285.29,163.28,285.3,163.29z" />
-                <path class="donggu" d="M445.65,126.53c2.58,4.52,14.19,13.54,9.03,15.48
+                    <path class="donggu" d="M445.65,126.53c2.58,4.52,14.19,13.54,9.03,15.48
 	c-5.16,1.93-13.54,2.58-12.25,8.38c1.29,5.8,1.29,10.96,5.16,12.9c3.87,1.93,8.38,1.93,4.51,4.51s-1.29,7.09-12.25,7.09
 	s-9.67,0-12.25,3.87c-2.58,3.87,0,6.45-5.16,6.45c-3.92,0-9.71-5.6-11.69-6.85c-0.54-1.38-1.51-3.76-2.17-5.08
 	c-0.97-1.93-5.16-4.84-10.64-4.51c-5.48,0.32-10.32,5.15-16.44,5.48c-6.13,0.32-15.16-0.97-16.45-2.26
@@ -245,7 +247,7 @@
 	s4.51-3.23,5.16,3.87c0.64,7.09,2.58,10.96-1.29,13.54c-3.87,2.58-11.61,5.8-6.45,7.09s5.8-1.29,6.45,4.51
 	c0.64,5.81-2.58,12.26-3.23,19.99c-0.64,7.74-1.29,12.9,2.58,14.19c3.87,1.29,9.03-5.16,10.96-2.58c1.94,2.58,9.03,10.32,8.39,13.54
 	C448.23,122.66,443.07,122.02,445.65,126.53z" />
-                <path class="suseonggu" d="M410.19,178.76c1.29,3.22,6.45,5.8,0,14.19
+                    <path class="suseonggu" d="M410.19,178.76c1.29,3.22,6.45,5.8,0,14.19
 	c-6.45,8.38-10.32,5.8-10.32,5.8s-10.31,9.67-9.02,10.96c1.29,1.29,6.44,2.58,7.73,5.16c1.29,2.58,5.16,10.96,4.52,15.47
 	c-0.65,4.52-7.74,3.23-9.68,6.45c-1.93,3.23,1.29,3.87-6.44,4.52c-7.74,0.64-14.19,5.8-19.35,6.44c-3.23,0.41-4.68,0.56-5.32,1.87
 	l-0.32-0.11c0,0-5.2-3.41-7.02-5.23c-1.82-1.83-9.57-3.65-15.5-2.74s-6.84-3.19-9.12-5.47s-14.13-2.28-20.52-2.28
@@ -255,7 +257,7 @@
 	c2.58-0.65,16.12-4.52,22.57-8.71c6.44-4.19,11.28-6.77,14.5-6.12c3.23,0.64,5.48,2.58,9.35,2.58c3.87,0,9.03-4.19,17.09,3.54
 	c8.06,7.74,11.28,13.22,12.57,14.51c1.29,1.29,10.32,2.58,16.45,2.26c6.12-0.33,10.96-5.16,16.44-5.48
 	c5.48-0.33,9.67,2.58,10.64,4.51c0.66,1.32,1.63,3.7,2.17,5.08C410.13,177.96,409.88,177.99,410.19,178.76z" />
-                <path class="bukgu" d="M300.71,90.4c0.46,2.05,9.12,11.63,8.44,16.18
+                    <path class="bukgu" d="M300.71,90.4c0.46,2.05,9.12,11.63,8.44,16.18
 	c-0.69,4.56-1.14,11.4-1.37,14.37c-0.23,2.96-4.33,4.33-3.65,7.52c0.69,3.19,3.2,6.15,1.14,7.29c-2.05,1.14-6.15-3.19-10.26,1.6
 	c-4.1,4.79-11.39,12.54-11.39,16.19c0,1.55,0.17,3.52,0.47,5.34c-1.01-1.88-3.25-3.61-7.7-4.31c-6.12-0.97-16.44-2.26-19.34-2.58
 	c-2.35-0.26-3.64-1.36-4.39-2.97c-0.17-0.38-0.32-0.79-0.44-1.22c-0.65-2.26-2.26-4.19-5.81-4.19c-3.54,0-11.28-4.19-16.44-6.77
@@ -267,11 +269,11 @@
 	c8.38,0,9.02,1.93,16.12-5.16c0.91-0.91,1.96-1.95,3.1-3.07l0.24,0.24c0,0,9.12-1.59,10.95,2.74c1.82,4.33,2.73,8.21,5.47,8.66
 	c2.73,0.46,7.98,3.42,8.89,6.39c0.91,2.96,1.37,6.38,2.51,8.2c1.14,1.83,4.33,0.46,2.5,10.03c-1.82,9.58,0.92,12.09,1.6,15.51
 	C302.99,85.16,300.26,88.35,300.71,90.4z" />
-                <path class="namgu" d="M278.83,177.03c0,0,7.29,4.1,5.01,15.27s-5.24,21.66-7.06,24.39
+                    <path class="namgu" d="M278.83,177.03c0,0,7.29,4.1,5.01,15.27s-5.24,21.66-7.06,24.39
 	c-1.83,2.74-7.75,1.14-8.89,3.88c-0.94,2.26-6.59,5-8.49,5.87c-5.55-3.57-16.2-12.25-18.87-14.53c-3.19-2.74-8.21-4.56-10.49-8.67
 	c-2.28-4.1,8.67-12.76,9.58-17.78c0.79-4.37,2.28-13.27,2.65-15.46l0.28,0.04c-0.05,0.21-0.01,0.34-0.01,0.34s12.25,3.22,15.8,3.54
 	c3.55,0.33,7.09,1.29,11.28,1.62c4.2,0.32,9.35,1.29,9.35,1.29l0.01,0.01L278.83,177.03z" />
-                <path class="dalseogu" d="M258.77,226.72c0,0,2.73,4.34,0,7.76c-2.74,3.41-15.05,7.75-16.64,7.97
+                    <path class="dalseogu" d="M258.77,226.72c0,0,2.73,4.34,0,7.76c-2.74,3.41-15.05,7.75-16.64,7.97
 	c-1.6,0.23-0.92,7.3-0.92,9.58s-2.73,12.99-6.15,14.13c-3.42,1.14-10.03,1.6-12.31-2.96s-6.61-13.68-13.45-13.68
 	s-15.05-4.79-17.33-7.07s-6.15-7.52-7.75-12.08c-1.59-4.56-10.03-6.38-14.59-7.07c-4.56-0.68-16.41-3.64-18.92-9.57
 	c-2.51-5.93-4.56-6.61-5.93-6.61c-1.14,0-4.2,1.43-5.17,1.91c-0.27-0.21-0.57-0.41-0.88-0.61c-3.8-2.44-6.92-5.24-9.54-7.84
@@ -280,13 +282,13 @@
 	c1.83-1.82,6.84-4.55,6.84-4.55c-0.01,0.05-0.04,0.22-0.08,0.49c-0.37,2.19-1.86,11.09-2.65,15.46
 	c-0.91,5.02-11.86,13.68-9.58,17.78c2.28,4.11,7.3,5.93,10.49,8.67c2.67,2.28,13.32,10.96,18.87,14.53
 	C259,226.62,258.77,226.72,258.77,226.72z" />
-                <path class="seogu" d="M242.35,169.51c0,0-5.01,2.73-6.84,4.55c-1.82,1.83-19.6,2.28-24.16,0.92
+                    <path class="seogu" d="M242.35,169.51c0,0-5.01,2.73-6.84,4.55c-1.82,1.83-19.6,2.28-24.16,0.92
 	c-4.56-1.37-6.38-0.46-7.75-4.56c-1.37-4.11-6.38-5.02-6.38-5.02s-3.08-1.76-5.11-3.9c-0.9-0.94-1.6-1.97-1.73-2.94
 	c-0.46-3.19-4.11-5.01-6.84-7.75c-2.74-2.73,5.01-9.12,4.56-12.31l0.28-0.04c0,0,13.86,0.32,19.67-0.97
 	c5.8-1.29,16.76-3.22,21.92-0.64s12.9,6.77,16.44,6.77c3.55,0,5.16,1.93,5.81,4.19c0.12,0.43,0.27,0.84,0.44,1.22l-0.12,0.07
 	c0,0-0.65,5.16-2.26,9.67c-1.61,4.52-3.55,8.71-5.8,9.67c-1.43,0.62-1.83,1.23-1.93,1.6l-0.28-0.04
 	C242.31,169.73,242.34,169.56,242.35,169.51z" />
-                <path class="dalsunggun" d="M375.37,282.57c1.29,5.16-0.64,8.39-1.29,14.19
+                    <path class="dalsunggun" d="M375.37,282.57c1.29,5.16-0.64,8.39-1.29,14.19
 	c-0.64,5.8-1.29,8.38-3.22,8.38c-1.94,0,4.51,5.8,0.64,9.67s-6.45,3.87-7.09,7.74c-0.65,3.87-4.51,5.16-12.25,6.45
 	c-7.74,1.29-7.74-7.09-10.32-5.81c-2.58,1.29-13.54,7.1-13.54,7.1s-8.38,9.02-12.25,10.31c-3.87,1.29-12.9-3.86-12.9-3.86
 	s-8.38,5.8-8.38,3.22s-7.74-3.87-5.8-9.67c1.93-5.81,3.87-10.96,0.64-10.32c-3.22,0.65-7.09,1.94-6.44-1.93
@@ -323,150 +325,150 @@
 	c0,5.16-1.93,10.32,3.87,7.74c2.7-1.2,5.12-4.49,6.74-7.99l0.45,0.22c0,0,9.12,3.65,12.77,5.02c3.65,1.36,6.38-1.37,6.84,1.82
 	c0.45,3.19-7.3,9.58-4.56,12.31c2.73,2.74,6.38,4.56,6.84,7.75C190.51,159.53,191.21,160.56,192.11,161.5z
 	" />
-            </svg>
-            <div id="local_brand" class="list-wrapper brand triangle border">
-                <div class="list-item">
-                    <div class="list-img">
-                        <img src="images/sample.png" alt="">
+                </svg>
+                <div id="local_brand" class="list-wrapper brand triangle border">
+                    <div class="list-item">
+                        <div class="list-img">
+                            <img src="images/sample.png" alt="">
+                        </div>
+                        <h1>브랜드</h1>
+                        <div class="payment">
+                            <p>결제수단</p>
+                            <ul>
+                                <li><i class="fab fa-cc-apple-pay"></i></li>
+                                <li><i class="fab fa-cc-paypal"></i></li>
+                                <li><i class="fab fa-cc-visa"></i></li>
+                                <li><i class="fab fa-cc-mastercard"></i></li>
+                            </ul>
+                        </div>
                     </div>
-                    <h1>브랜드</h1>
-                    <div class="payment">
-                        <p>결제수단</p>
-                        <ul>
-                            <li><i class="fab fa-cc-apple-pay"></i></li>
-                            <li><i class="fab fa-cc-paypal"></i></li>
-                            <li><i class="fab fa-cc-visa"></i></li>
-                            <li><i class="fab fa-cc-mastercard"></i></li>
-                        </ul>
+                    <div class="list-item">
+                        <div class="list-img">
+                            <img src="images/sample.png" alt="">
+                        </div>
+                        <h1>브랜드</h1>
+                        <div class="payment">
+                            <p>결제수단</p>
+                            <ul>
+                                <li><i class="fab fa-cc-apple-pay"></i></li>
+                                <li><i class="fab fa-cc-paypal"></i></li>
+                                <li><i class="fab fa-cc-visa"></i></li>
+                                <li><i class="fab fa-cc-mastercard"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-img">
+                            <img src="images/sample.png" alt="">
+                        </div>
+                        <h1>브랜드</h1>
+                        <div class="payment">
+                            <p>결제수단</p>
+                            <ul>
+                                <li><i class="fab fa-cc-apple-pay"></i></li>
+                                <li><i class="fab fa-cc-paypal"></i></li>
+                                <li><i class="fab fa-cc-visa"></i></li>
+                                <li><i class="fab fa-cc-mastercard"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-img">
+                            <img src="images/sample.png" alt="">
+                        </div>
+                        <h1>브랜드</h1>
+                        <div class="payment">
+                            <p>결제수단</p>
+                            <ul>
+                                <li><i class="fab fa-cc-apple-pay"></i></li>
+                                <li><i class="fab fa-cc-paypal"></i></li>
+                                <li><i class="fab fa-cc-visa"></i></li>
+                                <li><i class="fab fa-cc-mastercard"></i></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="list-item">
-                    <div class="list-img">
-                        <img src="images/sample.png" alt="">
-                    </div>
-                    <h1>브랜드</h1>
-                    <div class="payment">
-                        <p>결제수단</p>
-                        <ul>
-                            <li><i class="fab fa-cc-apple-pay"></i></li>
-                            <li><i class="fab fa-cc-paypal"></i></li>
-                            <li><i class="fab fa-cc-visa"></i></li>
-                            <li><i class="fab fa-cc-mastercard"></i></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="list-item">
-                    <div class="list-img">
-                        <img src="images/sample.png" alt="">
-                    </div>
-                    <h1>브랜드</h1>
-                    <div class="payment">
-                        <p>결제수단</p>
-                        <ul>
-                            <li><i class="fab fa-cc-apple-pay"></i></li>
-                            <li><i class="fab fa-cc-paypal"></i></li>
-                            <li><i class="fab fa-cc-visa"></i></li>
-                            <li><i class="fab fa-cc-mastercard"></i></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="list-item">
-                    <div class="list-img">
-                        <img src="images/sample.png" alt="">
-                    </div>
-                    <h1>브랜드</h1>
-                    <div class="payment">
-                        <p>결제수단</p>
-                        <ul>
-                            <li><i class="fab fa-cc-apple-pay"></i></li>
-                            <li><i class="fab fa-cc-paypal"></i></li>
-                            <li><i class="fab fa-cc-visa"></i></li>
-                            <li><i class="fab fa-cc-mastercard"></i></li>
-                        </ul>
-                    </div>
+                <div class="more">
+                    <i class="fas fa-sort-down"></i>
                 </div>
             </div>
-            <div class="more">
-                <i class="fas fa-sort-down"></i>
-            </div>
         </div>
-        </div>
-        <div class="section fp-auto-height" >
+        <div data-aos="fade-up" class="section fp-auto-height">
             <!--        랭킹-->
-        <div id="ranking" class="wrapper">
-            <div class="list-wrapper">
-                <div class="list-item">
-                    <div class="list-img">
-                        <img src="images/black.png" alt="user_sample">
+            <div id="ranking" class="wrapper">
+                <div class="list-wrapper">
+                    <div class="list-item">
+                        <div class="list-img">
+                            <img src="images/black.png" alt="user_sample">
+                        </div>
+                        <p>이름</p>
                     </div>
-                    <p>이름</p>
-                </div>
-                <div class="list-item">
-                    <div class="list-img">
-                        <img src="images/black.png" alt="user_sample">
+                    <div class="list-item">
+                        <div class="list-img">
+                            <img src="images/black.png" alt="user_sample">
+                        </div>
+                        <p>이름</p>
                     </div>
-                    <p>이름</p>
-                </div>
-                <div class="list-item">
-                    <div class="list-img">
-                        <img src="images/black.png" alt="user_sample">
+                    <div class="list-item">
+                        <div class="list-img">
+                            <img src="images/black.png" alt="user_sample">
+                        </div>
+                        <p>이름</p>
                     </div>
-                    <p>이름</p>
-                </div>
-                <div class="list-item">
-                    <div class="list-img">
-                        <img src="images/black.png" alt="user_sample">
+                    <div class="list-item">
+                        <div class="list-img">
+                            <img src="images/black.png" alt="user_sample">
+                        </div>
+                        <p>이름</p>
                     </div>
-                    <p>이름</p>
-                </div>
-                <div class="list-item">
-                    <div class="list-img">
-                        <img src="images/black.png" alt="user_sample">
+                    <div class="list-item">
+                        <div class="list-img">
+                            <img src="images/black.png" alt="user_sample">
+                        </div>
+                        <p>이름</p>
                     </div>
-                    <p>이름</p>
-                </div>
 
-            </div>
-        </div>
-        <!--        sns -->
-        <div id="sns">
-            <div id="sns_top">
-                <h1><a href="https://www.instagram.com/daegumeogu/">daegumeogu</a></h1>
-                <div id="sns_profile">
-                    <div id="sns_profile_img">
-                        <a href="https://www.instagram.com/daegumeogu/">
-                            <img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s320x320/94678474_879498719197097_1453865022609424384_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=se3oB2V8NjgAX-o4C-L&oh=f071b7e6a0b109b90dcf7945477c99f9&oe=5F5885AB" alt="profile"></a>
-                    </div>
-                    <ul>
-                        <li>
-                            <h2>45</h2>
-                            <p>게시물</p>
-                        </li>
-                        <li>
-                            <h2><a href="https://www.instagram.com/daegumeogu/followers/">158</a></h2>
-                            <p><a href="https://www.instagram.com/daegumeogu/followers/">팔로워</a></p>
-                        </li>
-                        <li>
-                            <h2><a href="https://www.instagram.com/daegumeogu/following/">97</a></h2>
-                            <p><a href="https://www.instagram.com/daegumeogu/following/">팔로잉</a></p>
-                        </li>
-                    </ul>
                 </div>
             </div>
-            <ul id="sns_img">
-                <li><a href="https://www.instagram.com/p/CDlRglUDR9L/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/116916305_153884002978422_6514536441061900282_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=hNYi4mFZ5zYAX9eq19z&oh=c28a4b0595d9fea1e7bb357c5fb4eced&oe=5F58CB37" alt="sns_image_sample"></a></li>
-                <li><a href="#https://www.instagram.com/p/CDitebjjvF3/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/s480x480/116778435_639374370313483_5484033748999722865_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=107&_nc_ohc=zLnW9Nuvn3wAX-68FLZ&oh=f6e86a7f757309792e9d90d5015e0152&oe=5F5A3C78"></a></li>
-                <li><a href="https://www.instagram.com/p/CDgGk3XDWqG/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/116910289_731011244386959_8232567951628696628_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=1VZC7XQ6fkQAX--JfVj&oh=37e5f51cdd4def0f57b7b1e610db69e2&oe=5F588501"></a></li>
-                <li><a href="https://www.instagram.com/p/CDdpXwHDf0Z/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/s150x150/117292982_130262622086994_518879431191036049_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=Skz-T04mgicAX-fx4Fw&oh=0577781446a0de44306d25f8db084ccc&oe=5F572082"></a></li>
-                <li><a href="https://www.instagram.com/p/CDbEu-3DOI2/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/116982136_352317229265098_6439531826079429293_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=Si3CuXmH_qcAX8kpD7p&oh=8ab4c338681969ce083b6748342d8500&oe=5F568CAE"></a></li>
-                <li><a href="https://www.instagram.com/p/CDTWXe2DIiU/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/s150x150/116166365_167722424815860_6205050471193841397_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=74FIZlPkyEwAX_kjbuA&oh=de72ed54d5468db74efda9cefdb8ea12&oe=5F5747F3"></a></li>
-                <li><a href="https://www.instagram.com/p/CDQtJFEDaqP/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/116409749_2332224643751247_1084341709832842668_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=ua249PV_fk8AX9EoVIw&oh=e3f894e5ef304f8c01b6662dd3d37dde&oe=5F5A074B"></a></li>
-                <li><a href="https://www.instagram.com/p/CDOF5RejoE9/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/c0.0.998.998a/s240x240/115992023_174272334141811_7004016918833957220_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=107&_nc_ohc=RlUWO5QB-hoAX_1wxyc&oh=1085281cbceb57f97cc7cd43b7ffde75&oe=5F591437"></a></li>
-                <li><a href="https://www.instagram.com/p/CDLnaJHj9-0/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/116149448_338608727148222_273022250621388999_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=A0FKaeQh-b4AX_6w6jW&oh=c4eb136ca8ddd1cb1fbc967a5f2d832c&oe=5F5799FA"></a></li>
-            </ul>
+            <!--        sns -->
+            <div id="sns">
+                <div id="sns_top">
+                    <h1><a href="https://www.instagram.com/daegumeogu/">daegumeogu</a></h1>
+                    <div id="sns_profile">
+                        <div id="sns_profile_img">
+                            <a href="https://www.instagram.com/daegumeogu/">
+                                <img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s320x320/94678474_879498719197097_1453865022609424384_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=se3oB2V8NjgAX-o4C-L&oh=f071b7e6a0b109b90dcf7945477c99f9&oe=5F5885AB" alt="profile"></a>
+                        </div>
+                        <ul>
+                            <li>
+                                <h2>45</h2>
+                                <p>게시물</p>
+                            </li>
+                            <li>
+                                <h2><a href="https://www.instagram.com/daegumeogu/followers/">158</a></h2>
+                                <p><a href="https://www.instagram.com/daegumeogu/followers/">팔로워</a></p>
+                            </li>
+                            <li>
+                                <h2><a href="https://www.instagram.com/daegumeogu/following/">97</a></h2>
+                                <p><a href="https://www.instagram.com/daegumeogu/following/">팔로잉</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul id="sns_img">
+                    <li><a href="https://www.instagram.com/p/CDlRglUDR9L/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/116916305_153884002978422_6514536441061900282_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=hNYi4mFZ5zYAX9eq19z&oh=c28a4b0595d9fea1e7bb357c5fb4eced&oe=5F58CB37" alt="sns_image_sample"></a></li>
+                    <li><a href="#https://www.instagram.com/p/CDitebjjvF3/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/s480x480/116778435_639374370313483_5484033748999722865_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=107&_nc_ohc=zLnW9Nuvn3wAX-68FLZ&oh=f6e86a7f757309792e9d90d5015e0152&oe=5F5A3C78"></a></li>
+                    <li><a href="https://www.instagram.com/p/CDgGk3XDWqG/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/116910289_731011244386959_8232567951628696628_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=1VZC7XQ6fkQAX--JfVj&oh=37e5f51cdd4def0f57b7b1e610db69e2&oe=5F588501"></a></li>
+                    <li><a href="https://www.instagram.com/p/CDdpXwHDf0Z/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/s150x150/117292982_130262622086994_518879431191036049_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=Skz-T04mgicAX-fx4Fw&oh=0577781446a0de44306d25f8db084ccc&oe=5F572082"></a></li>
+                    <li><a href="https://www.instagram.com/p/CDbEu-3DOI2/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/116982136_352317229265098_6439531826079429293_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=Si3CuXmH_qcAX8kpD7p&oh=8ab4c338681969ce083b6748342d8500&oe=5F568CAE"></a></li>
+                    <li><a href="https://www.instagram.com/p/CDTWXe2DIiU/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/s150x150/116166365_167722424815860_6205050471193841397_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=100&_nc_ohc=74FIZlPkyEwAX_kjbuA&oh=de72ed54d5468db74efda9cefdb8ea12&oe=5F5747F3"></a></li>
+                    <li><a href="https://www.instagram.com/p/CDQtJFEDaqP/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/116409749_2332224643751247_1084341709832842668_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=ua249PV_fk8AX9EoVIw&oh=e3f894e5ef304f8c01b6662dd3d37dde&oe=5F5A074B"></a></li>
+                    <li><a href="https://www.instagram.com/p/CDOF5RejoE9/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/c0.0.998.998a/s240x240/115992023_174272334141811_7004016918833957220_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=107&_nc_ohc=RlUWO5QB-hoAX_1wxyc&oh=1085281cbceb57f97cc7cd43b7ffde75&oe=5F591437"></a></li>
+                    <li><a href="https://www.instagram.com/p/CDLnaJHj9-0/"><img src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/116149448_338608727148222_273022250621388999_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=A0FKaeQh-b4AX_6w6jW&oh=c4eb136ca8ddd1cb1fbc967a5f2d832c&oe=5F5799FA"></a></li>
+                </ul>
+            </div>
         </div>
-        </div>
-        <div class="section fp-auto-height">
+        <div data-aos="fade-up" class="section fp-auto-height">
             <!--        게시판 목록 -->
             <div id="board_list" class="wrapper">
                 <ul>
@@ -507,19 +509,19 @@
             </div>
         </div>
     </div>
-    
-    
+
+
     <!--   하단 네비게이션-->
-        <div id="gnb_footer" class="md-whiteframe-1dp">
-            <div class="wrapper">
-                <ul>
-                    <li><a href="#"><i class="fas fa-home"></i></a></li>
-                    <li><a href="#"><i class="fas fa-edit"></i></a></li>
-                    <li><a href="#"><i class="fas fa-user"></i></a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-                </ul>
-            </div>
+    <div id="gnb_footer" class="md-whiteframe-1dp">
+        <div class="wrapper">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i></a></li>
+                <li><a href="#"><i class="fas fa-edit"></i></a></li>
+                <li><a href="#"><i class="fas fa-user"></i></a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+            </ul>
         </div>
+    </div>
     <!--   로고 애니메이션-->
     <script src="js/logo.js"></script>
 
@@ -531,7 +533,18 @@
 
     <!--    지도-->
     <script src="js/map.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+        // You can also pass an optional settings object
+        // below listed default settings
+        AOS.init({
+            // Global settings:
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            once: true,
+            duration: 500
+        });
     </script>
 </body>
 

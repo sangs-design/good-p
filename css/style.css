@@ -187,7 +187,9 @@
 #categories_brand,
 #map,
 #local_brand,
+#ranking,
 #sns,
+#board_list,
 #footer {
     margin-top: var(--main-margin);
 }
