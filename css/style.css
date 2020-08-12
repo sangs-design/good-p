@@ -6,7 +6,7 @@
     --border: 1px solid #000;
     --slider-triangle-size: 48px;
     --slider-triangle-color: #fff;
-    --triangle-size: 28px;
+    --triangle-size: 18px;
     --max-width: 800px;
 }
 body{
@@ -74,6 +74,7 @@ body{
 
 .triangle .list-img::after {
     content: '';
+    transition: 1s all ease;
     width: var(--triangle-size);
     height: var(--triangle-size);
     transform: rotate(45deg);
@@ -437,4 +438,9 @@ body{
 
 .section.active {
     opacity: 1;
+}
+.title .logo{
+    font-size: 48px;
+    margin-top: 48px;
+    margin-bottom: 30px;
 }
