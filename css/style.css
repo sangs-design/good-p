@@ -7,7 +7,7 @@
     --slider-triangle-size: 48px;
     --slider-triangle-color: #fff;
     --triangle-size: 18px;
-    --max-width: 800px;
+    --max-width: 1280px;
 }
 body{
     font-family: sans-serif;
@@ -443,4 +443,29 @@ body{
     font-size: 48px;
     margin-top: 48px;
     margin-bottom: 30px;
+}
+
+.slide-info{
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+.slide-info.right {
+	left: auto;
+    right: 10%;
+}
+.slide-info h1{
+    font-size: 42px;
+    font-weight: 900;
+}
+.slide-info p{
+    margin-top: 1em;
+}
+
+@media screen and (min-width: 769px) {
+   .list-wrapper.brand {
+    grid-template-columns: repeat(4, 1fr);
+}
 }
