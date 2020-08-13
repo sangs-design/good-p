@@ -2,7 +2,7 @@
 
 :root {
     --main-margin: 14px;
-    --main-color: #000;
+    --main-color: #fff;
     --border: 1px solid #000;
     --slider-triangle-size: 48px;
     --slider-triangle-color: #fff;
@@ -43,6 +43,7 @@ body{
 
 .list-item {
     position: relative;
+    width: 100%;
 }
 
 .list-item h1 {
@@ -57,19 +58,26 @@ body{
     color: #000;
 }
 
-.list-img {
+.list-img img{
     width: 100%;
-    overflow: hidden;
-    position: relative;
 }
-
-.list-img img {
-    display: block;
-    width: 100%;
+.brand .list-img{
+    padding-bottom: 100%;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.brand .list-img img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100%;
+    object-fit: cover;
 }
 
 .border .list-img {
-    border: var(--border);
+/*    border: var(--border);*/
 }
 
 .triangle .list-img::after {
@@ -247,14 +255,43 @@ body{
     margin-right: auto;
     height: auto;
 }
-
-#location .on {
+#location{
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
+#location span{
+    display: inline-block;
+    padding: 5px 10px 3px;
+}
+#location .on span{
     background: #000;
     color: #fff;
 }
+#location .on .on{
+    border-bottom: 1px solid #000;
+}
+#location .on ul{
+    display: flex;
+    flex-wrap: nowrap;
+}
 
-#location li {
-    padding: 5px 10px 3px;
+#location>ul{
+    position: relative;
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 0.5em;
+}
+#location>ul ul{
+    position: absolute;
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 1em;
+    bottom: -3em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    width: 100%;
+}
+#location>ul ul li{
+    word-break: keep-all;
 }
 
 #daegu path {
@@ -363,6 +400,7 @@ body{
 
 #board_list {
     font-size: 18px;
+    margin-top: 2em;
 }
 
 #board_list li {
@@ -391,9 +429,10 @@ body{
 }
 
 #footer {
+    margin-top: 2em;
     background: #000;
     color: #fff;
-    min-height: calc(100vh - 238px);
+    min-height: calc(100vh - 480px);
     box-sizing: border-box;
     padding: 1em 0;
 }

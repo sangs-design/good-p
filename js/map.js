@@ -1,3 +1,3 @@
-$('#daegu path, #location li').click(function(){
+$('#location li').click(function(){
     $(this).addClass("on").siblings().removeClass('on');
 });
