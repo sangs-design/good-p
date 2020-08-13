@@ -238,31 +238,16 @@
                             <span>서울</span>
                             <ul>
                                 <li class="on">전체</li>
-                                <li>종로구</li>
-                                <li>중구</li>
-                                <li>용산구</li>
-                                <li>성동구</li>
-                                <li>광진구</li>
-                                <li>동대문구</li>
-                                <li>중랑구</li>
-                                <li>성북구</li>
-                                <li>강북구</li>
-                                <li>도봉구</li>
-                                <li>노원구</li>
-                                <li>은평구</li>
-                                <li>서대문구</li>
-                                <li>마포구</li>
-                                <li>양천구</li>
-                                <li>강서구</li>
-                                <li>구로구</li>
-                                <li>금천구</li>
-                                <li>영등포구</li>
-                                <li>동작구</li>
-                                <li>관악구</li>
-                                <li>서초구</li>
-                                <li>강남구</li>
-                                <li>송파구</li>
-                                <li>강동구</li>
+                                <li>이태원</li>
+                                <li>홍대</li>
+                                <li>강남역</li>
+                                <li>가로수길</li>
+                                <li>신촌</li>
+                                <li>상수</li>
+                                <li>여의도</li>
+                                <li>건대</li>
+                                <li>잠실</li>
+                                <li>기타</li>
                             </ul>
                         </li>
                         <li>
@@ -270,13 +255,10 @@
                             <ul>
                                 <li class="on">전체</li>
                                 <li>동구</li>
-                                <li>서구</li>
-                                <li>남구</li>
-                                <li>북구</li>
                                 <li>중구</li>
-                                <li>수성구</li>
-                                <li>달서구</li>
-                                <li>달성군</li>
+                                <li>서구</li>
+                                <li>유성구</li>
+                                <li>대덕구</li>
                             </ul>
                         </li>
                         <li>
@@ -297,14 +279,22 @@
                             <span>부산</span>
                             <ul>
                                 <li class="on">전체</li>
-                                <li>동구</li>
-                                <li>서구</li>
-                                <li>남구</li>
-                                <li>북구</li>
                                 <li>중구</li>
-                                <li>수성구</li>
-                                <li>달서구</li>
-                                <li>달성군</li>
+                                <li>서구</li>
+                                <li>동구</li>
+                                <li>남구</li>
+                                <li>영도구</li>
+                                <li>진구</li>
+                                <li>동래구</li>
+                                <li>북구</li>
+                                <li>강서구</li>
+                                <li>해운대구</li>
+                                <li>사하구</li>
+                                <li>금정구</li>
+                                <li>연제구</li>
+                                <li>수영구</li>
+                                <li>사상구</li>
+                                <li>기장군</li>
                             </ul>
                         </li>
                         <li>
@@ -312,13 +302,10 @@
                             <ul>
                                 <li class="on">전체</li>
                                 <li>동구</li>
-                                <li>서구</li>
+                                <li>중구</li>
                                 <li>남구</li>
                                 <li>북구</li>
-                                <li>중구</li>
-                                <li>수성구</li>
-                                <li>달서구</li>
-                                <li>달성군</li>
+                                <li>울주군</li>
                             </ul>
                         </li>
                         <li>
@@ -329,10 +316,7 @@
                                 <li>서구</li>
                                 <li>남구</li>
                                 <li>북구</li>
-                                <li>중구</li>
-                                <li>수성구</li>
-                                <li>달서구</li>
-                                <li>달성군</li>
+                                <li>광산구</li>
                             </ul>
                         </li>
                     </ul>
@@ -598,7 +582,18 @@
 
         window.addEventListener('DOMContentLoaded', (event) => {
             $('#contents').removeClass('loading');
+            
             var mySwiper = new Swiper('.swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+            var mySwiper2 = new Swiper('.swiper-container2', {
                 loop: true,
                 pagination: {
                     el: '.swiper-pagination',

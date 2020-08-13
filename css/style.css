@@ -50,6 +50,7 @@ body{
     margin-top: 0.5em;
     font-weight: bold;
     color: #000;
+    text-align: left;
 }
 
 .list-item p {
@@ -284,14 +285,18 @@ body{
     position: absolute;
     border-bottom: 1px solid #e4e4e4;
     padding-bottom: 1em;
+    width: 100%;
     bottom: -3em;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    overflow-x: scroll;
     display: none;
     width: 100%;
 }
 #location>ul ul li{
     word-break: keep-all;
+}
+#location>ul ul li{
+    margin-left: 15px;
 }
 
 #daegu path {
@@ -486,7 +491,7 @@ body{
 
 .slide-info{
     position: absolute;
-    width: 30%;
+    width: 45%;
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
@@ -496,10 +501,11 @@ body{
     right: 10%;
 }
 .slide-info h1{
-    font-size: 42px;
+    font-size: 24px;
     font-weight: 900;
 }
 .slide-info p{
+    font-size: 14px;
     margin-top: 1em;
 }
 
