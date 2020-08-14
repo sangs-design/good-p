@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@1,800&display=swap');
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 :root {
     --main-margin: 14px;
@@ -21,7 +30,48 @@ body{
     max-width: var(--max-width);
     margin: 0 auto;
 }
-
+body.loading{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.onload.loading{
+    display: block;
+}
+.onload{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    display: none;
+}
+.onload .logo{
+    margin: 0 auto;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+.onload>div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+.onload div i{
+    margin-top: -102px;
+    font-size: 36px;
+    color: #8e8e8e;
+    animation-name: loading;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
 .list-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(36px, 1fr));
