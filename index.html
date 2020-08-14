@@ -634,7 +634,7 @@
         document.querySelector('#contents *').setAttribute("data-aos", "fade-in");
 
         window.addEventListener('DOMContentLoaded', (event) => {
-            $('.onload, #contents').removeClass('loading');
+            $('#contents').removeClass('loading');
             var mySwiper = new Swiper('.swiper-container', {
                 loop: true,
                 pagination: {
@@ -655,6 +655,7 @@
                     prevEl: '.swiper-button-prev',
                 }
             });
+            $('.onload').removeClass('loading');
         });
 
         AOS.init({
