@@ -5,3 +5,10 @@ document.body.style.paddingTop = header.offsetHeight + 'px';
 document.body.style.paddingBottom = gnb_footer.offsetHeight + 'px';
 
 $('.section').addClass('transition');
+
+$( function() {
+    $( "#city" ).selectmenu();
+ 
+    $( "#district" ).selectmenu();
+ 
+  } );

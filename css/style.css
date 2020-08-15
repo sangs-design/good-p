@@ -139,7 +139,6 @@ body{
     width: var(--triangle-size);
     height: var(--triangle-size);
     transform: rotate(45deg);
-    z-index: 150;
     position: absolute;
     background: var(--main-color);
     bottom: calc(var(--triangle-size)/-2);
@@ -532,7 +531,11 @@ body{
 #ranking .list-wrapper{
     grid-template-columns: repeat(5, 1fr);
 }
-
+.ui-selectmenu-button.ui-button{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+}
 @media screen and (min-width: 769px) {
    .list-wrapper.brand {
     grid-template-columns: repeat(4, 1fr);
