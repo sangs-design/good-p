@@ -30,6 +30,13 @@ body{
     max-width: var(--max-width);
     margin: 0 auto;
 }
+.title{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 36px;
+    font-weight: 700;
+    color: #484848;
+}
 .onload.loading{
     display: block;
     opacity: 1;
@@ -68,7 +75,7 @@ body{
 }
 .list-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(36px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
     grid-gap: var(--main-margin);
     justify-content: space-between;
     align-items: center;
@@ -93,14 +100,15 @@ body{
 .list-item h1 {
     margin-top: 0.5em;
     font-weight: bold;
-    color: #000;
+    color: #484848;
     text-align: left;
+    font-size: 24px;
 }
 
 .list-item p {
     margin-top: 0.5em;
-    font-size: 9px;
-    color: #000;
+    font-size: 14px;
+    color: #8e8e8e;
 }
 
 .list-img img{
@@ -171,19 +179,12 @@ body{
     right: calc(var(--slider-triangle-size)/-2);
 }
 
-.more {
-    margin-top: var(--main-margin);
-    text-align: center;
-    font-size: 18px;
-    padding-bottom: 0.3em;
-    border: var(--border);
-}
-
 .payment {
     margin-top: 0.5em;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: baseline;
+    color: #484848;
 }
 
 .payment ul {
@@ -240,21 +241,19 @@ body{
     cursor: pointer;
     font-size: 0.8em;
 }
-
-#search,
-#categories,
-#categories_brand,
-#map,
-#local_brand,
-#ranking,
-#sns,
-#board_list,
-#footer {
-    margin-top: var(--main-margin);
+#categories{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.category .list-item i{
+    font-size: 36px;
+    color: #484848;
 }
 
 #search {
     position: relative;
+    margin-top: 16px;
+    margin-bottom: 16px;
     width: 100%;
     border: 1px solid #000;
     box-sizing: border-box;
@@ -277,10 +276,13 @@ body{
 #search i {
     position: absolute;
     left: 10px;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     line-height: inherit;
 }
-
+#sec2{
+    padding: 15px 0;
+}
 #map ul {
     display: flex;
     justify-content: space-around;
@@ -301,46 +303,6 @@ body{
     height: auto;
 }
 #location{
-    margin-top: 2em;
-    margin-bottom: 4em;
-}
-#location span{
-    display: inline-block;
-    padding: 5px 10px 3px;
-}
-#location .on span{
-    background: #000;
-    color: #fff;
-}
-#location .on .on{
-    border-bottom: 1px solid #000;
-}
-#location .on ul{
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-#location>ul{
-    position: relative;
-    border-bottom: 1px solid #e4e4e4;
-    padding-bottom: 0.5em;
-}
-#location>ul ul{
-    position: absolute;
-    border-bottom: 1px solid #e4e4e4;
-    padding-bottom: 1em;
-    width: 100%;
-    bottom: -3em;
-    left: 0;
-    overflow-x: scroll;
-    display: none;
-    width: 100%;
-}
-#location>ul ul li{
-    word-break: keep-all;
-}
-#location>ul ul li{
-    margin-left: 15px;
 }
 
 #daegu path {
@@ -359,6 +321,7 @@ body{
 
 #sns {
     max-width: var(--max-width);
+    padding-bottom: 3px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -378,13 +341,18 @@ body{
     text-align: center;
 }
 
-#sns_top h1 {
+#sns_top .insta {
     color: #262626;
-    font-size: 16px;
+    font-size: 36px;
     font-weight: 600;
     border-bottom: 1px solid #dbdbdb;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    padding: 0.25em 0;
+}
+#sns_top .insta img{
+    height: 1em;
+    width: auto;
 }
 
 #sns_top h2 {
@@ -449,14 +417,17 @@ body{
 
 #board_list {
     font-size: 18px;
-    margin-top: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: #f2f2f2;
+    color: #484848;
 }
 
 #board_list li {
     display: flex;
     justify-content: space-between;
-    border-top: var(--border);
-    border-bottom: var(--border);
+    border-top: 1px solid #8e8e8e;
+    border-bottom: 1px solid #8e8e8e;
     line-height: 2em;
     font-weight: 900;
 }
@@ -478,12 +449,11 @@ body{
 }
 
 #footer {
-    margin-top: 2em;
-    background: #000;
-    color: #fff;
-    min-height: calc(100vh - 480px);
+    margin-top: 0;
+    background: #484848;
+    color: #f2f2f2;
     box-sizing: border-box;
-    padding: 1em 0;
+    padding: 5em 0;
 }
 
 #footer a {
