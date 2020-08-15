@@ -12,7 +12,7 @@
 :root {
     --main-margin: 14px;
     --main-color: #fff;
-    --border: 1px solid #000;
+    --border: 1px solid #8f8f8f;
     --slider-triangle-size: 48px;
     --slider-triangle-color: #fff;
     --triangle-size: 18px;
@@ -257,7 +257,8 @@ body{
     margin-top: 16px;
     margin-bottom: 16px;
     width: 100%;
-    border: 1px solid #000;
+    border: 1px solid #8f8f8f;
+    color: #484848;
     box-sizing: border-box;
     border-radius: 2em;
     overflow: hidden;
@@ -268,6 +269,7 @@ body{
 #search input[type="text"] {
     outline: none;
     width: 100%;
+    color: #484848;
     box-sizing: border-box;
     padding-left: 30px;
     border: none;
