@@ -33,7 +33,7 @@ body{
 .title{
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
     color: #484848;
 }
@@ -148,7 +148,6 @@ body{
 
 .swiper-container {
     position: relative;
-    width: 100%;
     max-width: var(--max-width);
     margin-left: auto;
     margin-right: auto;
@@ -242,8 +241,12 @@ body{
     font-size: 0.8em;
 }
 #categories{
-    padding-top: 15px;
+    padding-top: 30px;
     padding-bottom: 15px;
+}
+#categories .list-wrapper{
+    grid-row-gap: 2em;
+    padding-bottom: 1em;
 }
 .category .list-item i{
     font-size: 36px;
@@ -280,8 +283,9 @@ body{
     transform: translateY(-50%);
     line-height: inherit;
 }
-#sec2{
-    padding: 15px 0;
+#map{
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 #map ul {
     display: flex;
@@ -502,7 +506,6 @@ body{
     margin-top: 48px;
     margin-bottom: 30px;
 }
-
 .slide-info{
     position: absolute;
     width: 45%;
@@ -521,6 +524,13 @@ body{
 .slide-info p{
     font-size: 14px;
     margin-top: 1em;
+}
+#ranking {
+    padding-top: 15px;
+	padding-bottom: 15px;
+}
+#ranking .list-wrapper{
+    grid-template-columns: repeat(5, 1fr);
 }
 
 @media screen and (min-width: 769px) {
